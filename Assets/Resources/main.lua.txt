@@ -1,0 +1,15 @@
+print("xxxxxx");
+
+CS.LuaEntry.Init = function()
+  CS.test.eClick = function()
+    print("Click");
+  end
+  print("Init");
+end
+
+CS.LuaEntry.Dispose = function()
+  CS.test.eClick = nil;
+  CS.LuaEntry.Init = nil;
+  CS.LuaEntry.Dispose = nil;
+  print("Disposed");
+end
